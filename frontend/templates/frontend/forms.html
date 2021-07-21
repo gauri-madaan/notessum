@@ -1,0 +1,12 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+
+    <h3>Form</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

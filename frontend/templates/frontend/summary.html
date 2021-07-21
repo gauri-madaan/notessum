@@ -1,0 +1,9 @@
+{% extends 'frontend/base.html' %}
+
+{% block content %}
+    <h3>Summary</h3>
+    <div> {{ summary }} </div>
+    <h3>Note</h3>
+    <div> {{ note }} </div>
+    <div><a class="btn btn-primary" href="{% url 'frontend:pdfview' %}">Download A PDF</a></div>
+{% endblock %}
