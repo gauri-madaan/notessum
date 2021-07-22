@@ -6,6 +6,10 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from xhtml2pdf import pisa
 
+
+def index(request):
+    return render(request, 'frontend/index.html')
+
 def formview(request):
     form = NoteForm()
 

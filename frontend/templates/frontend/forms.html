@@ -1,12 +1,19 @@
 {% extends 'frontend/base.html' %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-
-    <h3>Form</h3>
+<section>
+<div class="text-center"><h3>Paste Text to Summarize</h3></div>
+<div class="text-center"><h6>(more than 150 words for best results)</h6></div>
+<div class="row">
 <form method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form|crispy }}
     <input type="submit" value="Submit">
 </form>
+</div>
+</section>
 
+<section>
+
+</section>
 {% endblock %}
