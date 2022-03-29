@@ -1,5 +1,6 @@
 import meaningcloud
 
+
 def getSummarization(text, sentences):
     summary = ''
     print("\tGetting automatic summarization...")
@@ -7,6 +8,6 @@ def getSummarization(text, sentences):
     if summarization_response.isSuccessful():
         summary = summarization_response.getSummary()
     else:
-        print("\tOops! Request to Summarization was not succesful: (" + summarization_response.getStatusCode() + ') ' + summarization_response.getStatusMsg())
+        print("\tOops! Request to Summarization... was not successful: (" + summarization_response.getStatusCode() + ') ' + summarization_response.getStatusMsg())
 
     return summary
